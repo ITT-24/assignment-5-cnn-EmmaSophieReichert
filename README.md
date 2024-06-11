@@ -12,4 +12,4 @@ Die Auswertung befindet sich in analysis.ipynb, während die meisten Berechnunge
 
 Ich habe den für die Erstellung des JSONs und das Zuschneiden des Bildes eine modifizierte Version von Stefan Röhrs Code \(https://github.com/ITT-24/assignment-5-cnn-Sro12343/tree/master/ImageLabel\) verwendet.
 
-
+Für das Training des Modells wurde das Notebook aus der Vorlesung verwendet und entsprechend angepasst.

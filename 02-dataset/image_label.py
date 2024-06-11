@@ -118,10 +118,12 @@ def on_mouse_press(x, y, button, modifiers):
             print(height2, width2)
             if(height2 > width2): #portrait format
                 destination = np.float32(np.array([[0, 0], [resolution_y, 0], [resolution_y, resolution_x], [0, resolution_x]]))
+                mat = cv2.getPerspectiveTransform(point_array, destination)
+                edit_img = cv2.warpPerspective(source_img,mat,(resolution_y, resolution_x)) #use final resulution here!!
             else: #landscape format
                 destination = np.float32(np.array([[0, 0], [resolution_x, 0], [resolution_x, resolution_y], [0, resolution_y]]))
-            mat = cv2.getPerspectiveTransform(point_array, destination)
-            edit_img = cv2.warpPerspective(source_img,mat,(resolution_x, resolution_y)) #use final resulution here!!
+                mat = cv2.getPerspectiveTransform(point_array, destination)
+                edit_img = cv2.warpPerspective(source_img,mat,(resolution_x, resolution_y)) #use final resulution here!!
             print("SHAPE: ", edit_img.shape)
             cv2.imwrite(input_path, edit_img)
             #resize to result resolution
