@@ -22,7 +22,7 @@ cap = cv2.VideoCapture(cam_index)
 
 model = load_model("gesture_recognition.keras")
 
-# this class was originally generated with GPT
+# this class was originally generated with GPT and then modified
 class MediaController:
     def __init__(self, media_file):
         pygame.mixer.init()
@@ -69,9 +69,8 @@ class MediaController:
     def is_playing(self):
         return pygame.mixer.music.get_busy()
 
-if __name__ == "__main__":
-    controller = MediaController(INPUT_PATH)
-    controller.play()
+controller = MediaController(INPUT_PATH)
+controller.play()
 
 def get_image():
     frame, detection = game_rectangle.get_game_rectangle(cap) #get the current camera frame; get a snipped version, if markers were once detected

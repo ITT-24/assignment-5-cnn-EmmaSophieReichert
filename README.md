@@ -25,3 +25,5 @@ Zur Steuerung:
 - like: lauter
 - dislike: leiser
 - stop: pausieren
+
+Das Erfassen der Gesten passiert alle 3 Sekunden, sodass man nicht gleich viel zu laut macht oder so.
