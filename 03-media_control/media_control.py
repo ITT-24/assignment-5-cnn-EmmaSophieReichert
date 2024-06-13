@@ -75,8 +75,8 @@ controller.play()
 def get_image():
     frame, detection = game_rectangle.get_game_rectangle(cap) #get the current camera frame; get a snipped version, if markers were once detected
     resized = cv2.resize(frame, SIZE)
-    #cv2.imshow('Resized Image', frame)
-    #cv2.waitKey(0)
+    cv2.imshow('Resized Image', frame)
+    cv2.waitKey(1)
     return resized.reshape(-1, IMG_SIZE, IMG_SIZE, COLOR_CHANNELS)
 
 while True:
